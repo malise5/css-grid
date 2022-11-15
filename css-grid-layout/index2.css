@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    height: 100vh;
+}
+.container{
+    display: grid;
+    height: inherit;
+    grid-template-areas: 
+    'Header Header Header'
+    'nav content sidebar'
+    'nav footer footer';
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 80px 1fr 70px;
+}
+
+header,
+footer,
+main,
+aside,
+nav{
+    background-color: steelblue;
+    color: white;
+    padding: 20px;
+    border: 1px solid skyblue;
+}
+
+header{
+    grid-area: Header;
+}
+nav{
+    grid-area: nav;
+}
+main{
+    grid-area: content;
+}
+aside{
+    grid-area: sidebar;
+}
+footer{
+    grid-area: footer;
+}
